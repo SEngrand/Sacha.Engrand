@@ -64,6 +64,49 @@
         .card:hover {
             transform: translateY(-5px);
         }
+        .photo-placeholder {
+            width: 100%; /* La largeur occupe tout le conteneur parent */
+            height: auto; /* La hauteur s'adapte selon la largeur */
+            aspect-ratio: 15 / 10; /* Définit le ratio de 15x10 pour un format paysage */
+            background-color: #D3E4CD;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Cache les débordements */
+            position: relative; /* Nécessaire pour positionner l'image à l'intérieur */
+        }
+        .photo-placeholder img {
+            position: absolute; /* Positionne l'image par rapport au conteneur */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centre l'image */
+            width: 100%; /* L'image prend toute la largeur */
+            height: auto; /* Ajuste la hauteur en fonction de la largeur */
+            object-fit: cover; /* L'image remplit le conteneur tout en conservant ses proportions */
+       }
+            /* Nouvelle classe pour le format portrait */
+    .photo-portrait {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 10 / 15; /* Format portrait */
+        background-color: #D3E4CD;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+    }
+    .photo-portrait img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
         footer {
             background-color: #88B04B;
             color: white;
@@ -93,7 +136,13 @@
             <div class="card">
                 <p>Ingénieur hydrogéologue avec une expérience dans la gestion de projets en environnement, hydrogéologie et hydrogéochimie. Diplômé depuis 2021 par un Master en Surveillance et Gestion de l'Environnement à l'université Paul Sabatier de Toulouse, je suis à la recherche de nouveaux défis professionnels.</p>
             </div>
-            <!-- Ajoute ici ton CV, diplômes, et autres documents pertinents -->
+            <div class="card photo-placeholder">
+              <img src="images/Enfants_Vieux_Chemin.jpeg" alt="Prélèvements d'eaux souterraines">
+            <div class="card photo-portrait">
+              <img src="images/CV_Sacha_Engrand" alt="Mon CV en 2024">
+</div>
+
+            
         </div>
     </section>
 </main>
