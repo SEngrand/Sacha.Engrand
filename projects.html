@@ -6,7 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sacha Engrand - Projets</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-    <!-- Même style que la page d'accueil -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #2E3B2D;
+            background-color: #F4F4F4;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #88B04B;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #6A8E3F;
+            padding: 10px;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #F0F4C3;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .section-title {
+            color: #4B5320;
+            border-bottom: 2px solid #88B04B;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1 1 calc(50% - 40px);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background-color: #88B04B;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
@@ -27,10 +92,16 @@
             <div class="card">
                 <h3>Projet de Cartographie d'un Aquifère Côtier</h3>
                 <p>Participation à la cartographie d'un aquifère côtier en Guyane, incluant des missions de terrain, la collecte et l'interprétation de données hydrogéologiques.</p>
+                <div class="photo-placeholder">
+                    <img src="images/aquifere.jpg" alt="Photo du projet de cartographie">
+                </div>
             </div>
             <div class="card">
                 <h3>Suivi des Phytosanitaires sur Grands Fleuves</h3>
                 <p>Suivi et gestion des phytosanitaires sur des fleuves en milieu équatorial, avec rédaction de rapports techniques et formation du personnel aux bonnes pratiques.</p>
+                <div class="photo-placeholder">
+                    <img src="images/phytosanitaires.jpg" alt="Photo du suivi des phytosanitaires">
+                </div>
             </div>
         </div>
     </section>
