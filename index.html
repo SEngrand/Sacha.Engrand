@@ -66,23 +66,25 @@
             transform: translateY(-5px);
         }
         .photo-placeholder {
-        height: 200px; /* Hauteur du conteneur */
-        background-color: #D3E4CD;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden; /* Cache les débordements */
-        position: relative; /* Nécessaire pour positionner l'image à l'intérieur */
+            width: 100%; /* La largeur occupe tout le conteneur parent */
+            height: 150px; /* Hauteur pour créer un format paysage */
+            max-height: 200px; /* Hauteur maximale pour éviter trop d'étirement */
+            background-color: #D3E4CD;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Cache les débordements */
+            position: relative; /* Nécessaire pour positionner l'image à l'intérieur */
         }
-    .photo-placeholder img {
-        position: absolute; /* Positionne l'image par rapport au conteneur */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Centre l'image */
-        width: 100%; /* L'image prend toute la largeur */
-        height: auto; /* Ajuste la hauteur en fonction de la largeur */
-        object-fit: cover; /* L'image remplit le conteneur tout en conservant ses proportions */
+        .photo-placeholder img {
+            position: absolute; /* Positionne l'image par rapport au conteneur */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centre l'image */
+            width: 100%; /* L'image prend toute la largeur */
+            height: auto; /* Ajuste la hauteur en fonction de la largeur */
+            object-fit: cover; /* L'image remplit le conteneur tout en conservant ses proportions */
         }
         footer {
             background-color: #88B04B;
@@ -117,7 +119,7 @@
         <h2 class="section-title">À Propos</h2>
         <div class="content">
             <div class="card">
-                <p>Ingénieur hydrogéologue avec une expérience dans la gestion de projets en environnement, hydrogéologie et hydrogéochimie. Diplomé depuis 2021 par un Master en Surveillance et Gestion de l'Environnement à l'univsersité Paul Sabatier de Toulouse, je suis à la recherche de nouveaux défis professionnels.</p>
+                <p>Ingénieur hydrogéologue avec une expérience dans la gestion de projets en environnement, hydrogéologie et hydrogéochimie. Diplômé depuis 2021 par un Master en Surveillance et Gestion de l'Environnement à l'université Paul Sabatier de Toulouse, je suis à la recherche de nouveaux défis professionnels.</p>
             </div>
             <div class="card photo-placeholder">
                 <img src="images/Enfants_Vieux_Chemin.jpeg" alt="Prélèvements d'eaux souterraines">
@@ -131,12 +133,16 @@
             <div class="card">
                 <h3>Projet de Cartographie d'un Aquifère Côtier</h3>
                 <p>Participation à la cartographie d'un aquifère côtier en Guyane, incluant des missions de terrain, la collecte et l'interprétation de données hydrogéologiques.</p>
-                <div class="photo-placeholder">Espace pour une photo du projet</div>
+                <div class="photo-placeholder">
+                    <img src="images/aquifere.jpg" alt="Photo du projet de cartographie">
+                </div>
             </div>
             <div class="card">
                 <h3>Suivi des Phytosanitaires sur Grands Fleuves</h3>
                 <p>Suivi et gestion des phytosanitaires sur des fleuves en milieu équatorial, avec rédaction de rapports techniques et formation du personnel aux bonnes pratiques.</p>
-                <div class="photo-placeholder">Espace pour une photo du projet</div>
+                <div class="photo-placeholder">
+                    <img src="images/phytosanitaires.jpg" alt="Photo du suivi des phytosanitaires">
+                </div>
             </div>
         </div>
     </section>
@@ -147,12 +153,16 @@
             <div class="card">
                 <h3>Voyage</h3>
                 <p>Exploration de cultures étrangères et immersion en milieu naturel.</p>
-                <div class="photo-placeholder">Espace pour une photo de voyage</div>
+                <div class="photo-placeholder">
+                    <img src="images/voyage.jpg" alt="Photo de voyage">
+                </div>
             </div>
             <div class="card">
                 <h3>Musique & Littérature</h3>
                 <p>Apprécie les moments de détente en lisant ou en écoutant de la musique.</p>
-                <div class="photo-placeholder">Espace pour une image associée</div>
+                <div class="photo-placeholder">
+                    <img src="images/musique_litterature.jpg" alt="Image associée à la musique et littérature">
+                </div>
             </div>
         </div>
     </section>
