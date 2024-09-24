@@ -5,38 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sacha Engrand - Ingénieur Hydrogéologue</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             color: #2E3B2D;
             background-color: #F4F4F4;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
         header {
             background-color: #88B04B;
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
         }
         nav {
+            position: sticky;
+            top: 0;
             display: flex;
             justify-content: center;
             background-color: #6A8E3F;
             padding: 10px;
+            z-index: 1000;
         }
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #F0F4C3;
         }
         section {
-            padding: 20px;
+            padding: 40px 20px;
         }
         .section-title {
             color: #4B5320;
             border-bottom: 2px solid #88B04B;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
         }
         .content {
             display: flex;
@@ -47,17 +58,12 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 15px;
+            padding: 20px;
             flex: 1 1 calc(50% - 40px);
+            transition: transform 0.3s;
         }
-        footer {
-            background-color: #88B04B;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .card:hover {
+            transform: translateY(-5px);
         }
         .photo-placeholder {
             height: 200px;
@@ -68,6 +74,19 @@
             justify-content: center;
             color: #4B5320;
             font-size: 16px;
+            text-align: center;
+        }
+        footer {
+            background-color: #88B04B;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
@@ -85,57 +104,59 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
-    <h2 class="section-title">À Propos</h2>
-    <div class="content">
-        <div class="card">
-            <p>Ingénieur hydrogéologue avec une expérience dans la gestion de projets en environnement, hydrogéologie et hydrogéochimie. Passionné par l'eau, la nature et le développement durable, je suis à la recherche de défis professionnels qui me permettent de contribuer positivement à la gestion des ressources en eau.</p>
+<main>
+    <section id="about">
+        <h2 class="section-title">À Propos</h2>
+        <div class="content">
+            <div class="card">
+                <p>Ingénieur hydrogéologue avec une expérience dans la gestion de projets en environnement, hydrogéologie et hydrogéochimie. Passionné par l'eau, la nature et le développement durable, je suis à la recherche de défis professionnels qui me permettent de contribuer positivement à la gestion des ressources en eau.</p>
+            </div>
+            <div class="card photo-placeholder">
+                <!-- Espace pour ajouter une photo personnelle -->
+                Photo de profil
+            </div>
         </div>
-        <div class="card photo-placeholder">
-            <!-- Espace pour ajouter une photo personnelle -->
-            Photo de profil
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="projects">
-    <h2 class="section-title">Projets</h2>
-    <div class="content">
-        <div class="card">
-            <h3>Projet de Cartographie d'un Aquifère Côtier</h3>
-            <p>Participation à la cartographie d'un aquifère côtier en Guyane, incluant des missions de terrain, la collecte et l'interprétation de données hydrogéologiques.</p>
-            <div class="photo-placeholder">Espace pour une photo du projet</div>
+    <section id="projects">
+        <h2 class="section-title">Projets</h2>
+        <div class="content">
+            <div class="card">
+                <h3>Projet de Cartographie d'un Aquifère Côtier</h3>
+                <p>Participation à la cartographie d'un aquifère côtier en Guyane, incluant des missions de terrain, la collecte et l'interprétation de données hydrogéologiques.</p>
+                <div class="photo-placeholder">Espace pour une photo du projet</div>
+            </div>
+            <div class="card">
+                <h3>Suivi des Phytosanitaires sur Grands Fleuves</h3>
+                <p>Suivi et gestion des phytosanitaires sur des fleuves en milieu équatorial, avec rédaction de rapports techniques et formation du personnel aux bonnes pratiques.</p>
+                <div class="photo-placeholder">Espace pour une photo du projet</div>
+            </div>
         </div>
-        <div class="card">
-            <h3>Suivi des Phytosanitaires sur Grands Fleuves</h3>
-            <p>Suivi et gestion des phytosanitaires sur des fleuves en milieu équatorial, avec rédaction de rapports techniques et formation du personnel aux bonnes pratiques.</p>
-            <div class="photo-placeholder">Espace pour une photo du projet</div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="interests">
-    <h2 class="section-title">Passions</h2>
-    <div class="content">
-        <div class="card">
-            <h3>Voyage</h3>
-            <p>Exploration de cultures étrangères et immersion en milieu naturel.</p>
-            <div class="photo-placeholder">Espace pour une photo de voyage</div>
+    <section id="interests">
+        <h2 class="section-title">Passions</h2>
+        <div class="content">
+            <div class="card">
+                <h3>Voyage</h3>
+                <p>Exploration de cultures étrangères et immersion en milieu naturel.</p>
+                <div class="photo-placeholder">Espace pour une photo de voyage</div>
+            </div>
+            <div class="card">
+                <h3>Musique & Littérature</h3>
+                <p>Apprécie les moments de détente en lisant ou en écoutant de la musique.</p>
+                <div class="photo-placeholder">Espace pour une image associée</div>
+            </div>
         </div>
-        <div class="card">
-            <h3>Musique & Littérature</h3>
-            <p>Apprécie les moments de détente en lisant ou en écoutant de la musique.</p>
-            <div class="photo-placeholder">Espace pour une image associée</div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>Email : <a href="mailto:engrand.sacha974@gmail.com">engrand.sacha974@gmail.com</a></p>
-    <p>Téléphone : (+33) 07 80 05 70 93</p>
-    <p>Basé à Cayenne, Guyane française</p>
-</section>
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Email : <a href="mailto:engrand.sacha974@gmail.com">engrand.sacha974@gmail.com</a></p>
+        <p>Téléphone : (+33) 07 80 05 70 93</p>
+        <p>Basé à Cayenne, Guyane française</p>
+    </section>
+</main>
 
 <footer>
     <p>© 2024 Sacha Engrand. Tous droits réservés.</p>
