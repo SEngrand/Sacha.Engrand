@@ -66,15 +66,24 @@
             transform: translateY(-5px);
         }
         .photo-placeholder {
-            height: 200px;
-            background-color: #D3E4CD;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4B5320;
-            font-size: 16px;
-            text-align: center;
+        height: 200px; /* Hauteur du conteneur */
+        background-color: #D3E4CD;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; /* Cache les débordements */
+        position: relative; /* Nécessaire pour positionner l'image à l'intérieur */
+        }
+    .photo-placeholder img {
+        position: absolute; /* Positionne l'image par rapport au conteneur */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centre l'image */
+        width: 100%; /* L'image prend toute la largeur */
+        height: auto; /* Ajuste la hauteur en fonction de la largeur */
+        object-fit: cover; /* L'image remplit le conteneur tout en conservant ses proportions */
+    }
         }
         footer {
             background-color: #88B04B;
@@ -94,7 +103,7 @@
 
 <header>
     <h1>Sacha Engrand</h1>
-    <p>Ingénieur Hydrogéologue & Passionné par la Nature</p>
+    <p>Ingénieur Hydrogéologue</p>
 </header>
 
 <nav>
@@ -111,9 +120,8 @@
             <div class="card">
                 <p>Ingénieur hydrogéologue avec une expérience dans la gestion de projets en environnement, hydrogéologie et hydrogéochimie. Diplomé depuis 2021 par un Master en Surveillance et Gestion de l'Environnement à l'univsersité Paul Sabatier de Toulouse, je suis à la recherche de nouveaux défis professionnels.</p>
             </div>
-            <div class="card photo-placeholder">
+            <div class="photo-placeholder">
                 <img src="images/Enfants_Vieux_Chemin.jpeg" alt="Prélèvements d'eaux souterraines" style="max-width:600px; height:auto; border-radius: 5px;">
-                Photo de profil
             </div>
         </div>
     </section>
