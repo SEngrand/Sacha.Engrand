@@ -67,8 +67,8 @@
         }
         .photo-placeholder {
             width: 100%; /* La largeur occupe tout le conteneur parent */
-            height: 150px; /* Hauteur pour créer un format paysage */
-            max-height: 200px; /* Hauteur maximale pour éviter trop d'étirement */
+            height: auto; /* La hauteur s'adapte selon la largeur */
+            aspect-ratio: 15 / 10; /* Définit le ratio de 15x10 pour un format paysage */
             background-color: #D3E4CD;
             border-radius: 5px;
             display: flex;
