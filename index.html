@@ -16,17 +16,17 @@
             line-height: 1.6;
         }
         header {
-    background: linear-gradient(to bottom, #ffffff, #006994); /* Dégradé du blanc en haut vers le bleu mer en bas */
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
+            background: linear-gradient(to bottom, #ffffff, #006994);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
         nav {
             position: sticky;
             top: 0;
             display: flex;
             justify-content: center;
-            background-color: #6A8E3F;
+            background-color: #004a70; /* Bleu foncé pour le bandeau */
             padding: 10px;
             z-index: 1000;
         }
@@ -51,12 +51,18 @@
         .content {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            gap: 40px;
+        }
+        .sub-section {
+            display: flex;
+            flex-direction: column;
             gap: 20px;
         }
-        .card {
-            text-align: center;
-            max-width: 300px;
+        .image-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
         }
         .thumbnail {
             width: 300px;
@@ -69,18 +75,19 @@
         .thumbnail:hover {
             transform: scale(1.05);
         }
-        .download-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: #88B04B;
-            color: white;
-            text-decoration: none;
+        .text-overlay {
+            position: absolute;
+            left: 330px; /* Positionnement à droite de l'image */
+            top: 0;
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s;
         }
-        .download-btn:hover {
-            background-color: #6A8E3F;
+        .image-container:hover .text-overlay {
+            display: block;
         }
         .modal {
             display: none;
@@ -132,14 +139,41 @@
     <section id="about">
         <h2 class="section-title">À Propos</h2>
         <div class="content">
-            <div class="card">
-                <img src="images/Enfants_Vieux_Chemin.jpeg" alt="Prélèvements d'eaux souterraines" class="thumbnail" onclick="openModal('images/Enfants_Vieux_Chemin.jpeg')">
-                <p>Prélèvements d'eaux souterraines</p>
+            
+            <!-- Mon Parcours -->
+            <div class="sub-section">
+                <h3>Mon Parcours</h3>
+                <div class="image-container">
+                    <img src="images/parcours1.jpg" alt="Parcours 1" class="thumbnail" onclick="openModal('images/parcours1.jpg')">
+                    <div class="text-overlay">Description de l'image Parcours 1.</div>
+                </div>
+                <div class="image-container">
+                    <img src="images/parcours2.jpg" alt="Parcours 2" class="thumbnail" onclick="openModal('images/parcours2.jpg')">
+                    <div class="text-overlay">Description de l'image Parcours 2.</div>
+                </div>
             </div>
-            <div class="card">
-                <img src="images/CV_Sacha_Engrand.png" alt="Mon CV en 2024" class="thumbnail" onclick="openModal('images/CV_Sacha_Engrand.png')">
-                <p>Mon CV en 2024</p>
-                <a href="images/CV_Sacha_Engrand.png" download class="download-btn">Télécharger</a>
+            
+            <!-- Mes Expériences Professionnelles -->
+            <div class="sub-section">
+                <h3>Mes Expériences Professionnelles</h3>
+                <div class="image-container">
+                    <img src="images/experience1.jpg" alt="Expérience 1" class="thumbnail" onclick="openModal('images/experience1.jpg')">
+                    <div class="text-overlay">Description de l'image Expérience 1.</div>
+                </div>
+                <div class="image-container">
+                    <img src="images/experience2.jpg" alt="Expérience 2" class="thumbnail" onclick="openModal('images/experience2.jpg')">
+                    <div class="text-overlay">Description de l'image Expérience 2.</div>
+                </div>
+            </div>
+            
+            <!-- Mon CV -->
+            <div class="sub-section">
+                <h3>Mon CV</h3>
+                <div class="image-container">
+                    <img src="images/CV_Sacha_Engrand.png" alt="Mon CV en 2024" class="thumbnail" onclick="openModal('images/CV_Sacha_Engrand.png')">
+                    <div class="text-overlay">Visualisez mon CV détaillé.</div>
+                </div>
+                <a href="images/CV_Sacha_Engrand.png" download class="download-btn">Télécharger le CV</a>
             </div>
         </div>
     </section>
